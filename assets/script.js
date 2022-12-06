@@ -15,7 +15,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function password() {
-
   let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 15 characters")
   if (numCharacters >= 8 && numCharacters <= 15) {
     confirm("Your password is: " + numCharacters + " characters long")
@@ -57,5 +56,9 @@ function password() {
     alert("Please enter a vaild entry")
   }
 }
+
+
+
+
 //  confirm each character type choice (at least one character choice MUST be selected when all prompts have been answered)
 // The password generated matches the selected character criteria
