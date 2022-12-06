@@ -58,6 +58,25 @@ function password() {
 }
 
 
+// Creating a random set of characters (can't seem to add to itself)
+let allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+
+let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let lowerChars = "abcdefghijklmnopqrstuvwxyz"
+let numberChars = "1234567890"
+let specialChars = "!@#$%^&*"
+
+// !!!! Need to be able to combine strings!!!!
+passwordLength = 15;
+
+for (let i = 0; i < passwordLength; i++) {
+  let charSelector = Math.floor(Math.random() * 70);
+  let newChar = allChars[charSelector];
+  let startingPass = startingPass + newChar;
+  console.log(startingPass);
+}
+
+
 
 
 //  confirm each character type choice (at least one character choice MUST be selected when all prompts have been answered)
