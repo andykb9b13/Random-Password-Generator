@@ -77,14 +77,18 @@ function password() {
   }
 
   // Determine the 
-
-  for (let i = 0; i < numCharacters; i++) {
-    let charSelector = Math.floor(Math.random() * charString.length);
-    let newChar = charString[charSelector];
-
-    console.log(newChar);
-
+  function makePassword() {
+    let password = ""
+    for (let i = 0; i < numCharacters; i++) {
+      let charSelector = Math.floor(Math.random() * charString.length);
+      let newChar = charString[charSelector];
+      password = password.concat(newChar);
+      console.log(password);
+    }
+    return password
   }
+  makePassword()
+  let newPassword = makePassword()
 }
 
 
