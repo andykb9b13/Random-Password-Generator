@@ -22,7 +22,6 @@ let numberChars = "1234567890"
 let specialChars = "!@#$%^&*"
 let charString = "";
 
-
 function password() {
   let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 15 characters")
   if (numCharacters >= 8 && numCharacters <= 15) {
@@ -32,6 +31,7 @@ function password() {
   } else {
     alert("Your password is too LONG. Must be between 8 and 15 characters")
   }
+  // Ask the user if they want lowercase letters
   let lowercase = prompt("Would you like to use lowercase letters? Y or N");
   if (lowercase === "Y") {
     confirm("Your password will include lowercase letters")
@@ -42,6 +42,7 @@ function password() {
   } else {
     alert("Please enter a vaild entry")
   }
+  // ask the user if they want uppercase letters
   let uppercase = prompt("Would you like to use UPPERCASE letters?");
   if (uppercase === "Y") {
     confirm("Your password will include UPPERCASE letters")
@@ -52,6 +53,7 @@ function password() {
   } else {
     alert("Please enter a vaild entry")
   }
+  // ask the user if they want numbers
   let numbers = prompt("would you like to use numbers?");
   if (numbers === "Y") {
     confirm("Your password will include numbers")
@@ -62,6 +64,7 @@ function password() {
   } else {
     alert("Please enter a vaild entry")
   }
+  // ask the user if they want special characters
   let special = prompt("Would you like to use special characters? (Ex. $ # % *)");
   if (special === "Y") {
     confirm("Your password will include special characters")
@@ -73,14 +76,15 @@ function password() {
     alert("Please enter a vaild entry")
   }
 
-  for (let i = 0; i < numCharacters; i++) {
-    let charSelector = Math.floor(Math.random() * 70);
-    let randomPass = "";
-    let newChar = charString[charSelector];
-    let newPass = randomPass + newChar;
-    console.log(newPass);
-  }
+  // Determine the 
 
+  for (let i = 0; i < numCharacters; i++) {
+    let charSelector = Math.floor(Math.random() * charString.length);
+    let newChar = charString[charSelector];
+
+    console.log(newChar);
+
+  }
 }
 
 
