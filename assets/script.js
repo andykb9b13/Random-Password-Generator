@@ -16,7 +16,6 @@ generateBtn.addEventListener("click", writePassword);
 
 // Creating a random set of characters (can't seem to add to itself)
 let allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
-
 let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let lowerChars = "abcdefghijklmnopqrstuvwxyz"
 let numberChars = "1234567890"
