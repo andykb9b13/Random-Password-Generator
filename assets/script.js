@@ -14,6 +14,16 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Creating a random set of characters (can't seem to add to itself)
+let allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+
+let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let lowerChars = "abcdefghijklmnopqrstuvwxyz"
+let numberChars = "1234567890"
+let specialChars = "!@#$%^&*"
+let charString = "";
+
+
 function password() {
   let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 15 characters")
   if (numCharacters >= 8 && numCharacters <= 15) {
@@ -26,6 +36,8 @@ function password() {
   let lowercase = prompt("Would you like to use lowercase letters? Y or N");
   if (lowercase === "Y") {
     confirm("Your password will include lowercase letters")
+    charString = charString.concat(lowerChars);
+    console.log(charString)
   } else if (lowercase === "N") {
     confirm("Your password will NOT contain lowercase letters")
   } else {
@@ -34,6 +46,8 @@ function password() {
   let uppercase = prompt("Would you like to use UPPERCASE letters?");
   if (uppercase === "Y") {
     confirm("Your password will include UPPERCASE letters")
+    charString = charString.concat(upperChars)
+    console.log(charString)
   } else if (uppercase === "N") {
     confirm("Your password will NOT contain UPPERCASE letters")
   } else {
@@ -42,6 +56,8 @@ function password() {
   let numbers = prompt("would you like to use numbers?");
   if (numbers === "Y") {
     confirm("Your password will include numbers")
+    charString = charString.concat(numberChars)
+    console.log(charString)
   } else if (numbers === "N") {
     confirm("Your password will NOT contain numbers")
   } else {
@@ -50,31 +66,29 @@ function password() {
   let special = prompt("Would you like to use special characters? (Ex. $ # % *)");
   if (special === "Y") {
     confirm("Your password will include special characters")
+    charString = charString.concat(specialChars)
+    console.log(charString)
   } else if (special === "N") {
     confirm("Your password will NOT contain special characters")
   } else {
     alert("Please enter a vaild entry")
   }
+
+  for (let i = 0; i < numCharacters; i++) {
+    let charSelector = Math.floor(Math.random() * 70);
+    let randomPass = "";
+    let newChar = charString[charSelector];
+    let newPass = randomPass + newChar;
+    console.log(newPass);
+  }
+
 }
 
 
-// Creating a random set of characters (can't seem to add to itself)
-let allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
-
-let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let lowerChars = "abcdefghijklmnopqrstuvwxyz"
-let numberChars = "1234567890"
-let specialChars = "!@#$%^&*"
 
 // !!!! Need to be able to combine strings!!!!
-passwordLength = 15;
 
-for (let i = 0; i < passwordLength; i++) {
-  let charSelector = Math.floor(Math.random() * 70);
-  let newChar = allChars[charSelector];
-  let startingPass = startingPass + newChar;
-  console.log(startingPass);
-}
+
 
 
 
