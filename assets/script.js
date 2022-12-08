@@ -27,7 +27,7 @@ function newPassword() {
   // Ask the user if they want lowercase letters
   let lowercase = confirm("Would you like to use lowercase letters?");
   if (lowercase) {
-    alert("Nice! Your password WILL include lowercase letters")
+    alert("Nice! Your password WILL include lowercase letters (...hooray for the little guys!")
     // This combines the selected strings into the final charString which will hold all selected character choices
     charString = charString.concat(lowerChars);
     console.log(charString)
