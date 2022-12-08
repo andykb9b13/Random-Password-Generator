@@ -36,3 +36,6 @@ THEN a password is generated that matches the selected criteria
 THEN the password is either displayed in an alert or written to the page
 
 ![password final display screen](assets/images/RPG-display.png)
+
+## Live Site Link
+[Live Site Link](https://andykb9b13.github.io/Random-Password-Generator/)
