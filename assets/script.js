@@ -13,52 +13,56 @@ function newPassword() {
     alert("Whoops! Nevermind...")
     return "I guess you didn't want to make a password after all :( Try again...it's fun!"
   } else if (numCharacters >= 8 && numCharacters <= 128) {
-    confirm("Your password is: " + numCharacters + " characters long")
+    alert("Your Super-Secret password is: " + numCharacters + " characters long (...now for the fun part)")
   } else if (numCharacters < 8) {
-    alert("You password is too SHORT. Must be between 8 and 128 characters")
+    alert("OH NO!!! You password is too SHORT! Try again. It must be between 8 and 128 characters")
+    return newPassword()
+  } else if (numCharacters > 128) {
+    alert("AHHHHHH!!! Your password is too LONG! Try again. It must be between 8 and 128 characters")
     return newPassword()
   } else {
-    alert("Your password is too LONG. Must be between 8 and 128 characters")
+    alert("Whoa, that's weird! I don't think that was a number. Please enter only a number.")
     return newPassword()
   }
   // Ask the user if they want lowercase letters
   let lowercase = confirm("Would you like to use lowercase letters?");
   if (lowercase) {
-    alert("Your password will include lowercase letters")
+    alert("Nice! Your password WILL include lowercase letters")
+    // This combines the selected strings into the final charString which will hold all selected character choices
     charString = charString.concat(lowerChars);
     console.log(charString)
   } else {
-    alert("Your password will NOT contain lowercase letters")
+    alert("No worries. Your password will NOT contain lowercase letters (...they're not my favorite anyways)")
   }
   // ask the user if they want uppercase letters
   let uppercase = confirm("Would you like to use UPPERCASE letters?");
   if (uppercase) {
-    alert("Your password will include UPPERCASE letters")
+    alert("Right on!! Your password WILL include UPPERCASE letters (...go BIG or go home, right?!)")
     charString = charString.concat(upperChars)
     console.log(charString)
   } else {
-    alert("Your password will NOT contain UPPERCASE letters")
+    alert("Ok! Your password will NOT contain UPPERCASE letters (...they'll sit this one out)")
   }
   // ask the user if they want numbers
   let numbers = confirm("Would you like to use numbers?");
   if (numbers) {
-    alert("Your password will include numbers")
+    alert("YAY!!! Your password WILL include numbers (...give me a high five!)")
     charString = charString.concat(numberChars)
     console.log(charString)
   } else {
-    alert("Your password will NOT contain numbers")
+    alert("Cool. Your password will NOT contain numbers (...numbers, schmumbers)")
   }
   // ask the user if they want special characters
   let special = confirm("Would you like to use special characters? (Ex. $ # % *)");
   if (special) {
-    alert("Your password will include special characters")
+    alert("YES!!! Your password WILL include special characters (...my f@v*r!te)")
     charString = charString.concat(specialChars)
     console.log(charString)
   } else {
-    alert("Your password will NOT contain special characters")
+    alert("No problem. Your password will NOT contain special characters (...yeah they're weird anyways)")
   }
   if (!lowercase && !uppercase && !numbers && !special) {
-    alert("You must select a type of character for you password")
+    alert("Whoa, wait a second! You must select a type of character for you password. Go back dude!")
     return newPassword()
   }
 
