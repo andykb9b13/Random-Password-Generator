@@ -6,6 +6,7 @@ let numberChars = "1234567890"
 let specialChars = "!@#$%^&*"
 let charString = "";
 
+// Function that makes the password using character and length choices
 function newPassword() {
   let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 128 characters")
   if (!numCharacters) {
@@ -61,7 +62,7 @@ function newPassword() {
     return newPassword()
   }
 
-  // Actually make the password
+  // Actually make the password using the selected character and length choices
   function makePassword() {
     let password = ""
     for (let i = 0; i < numCharacters; i++) {
