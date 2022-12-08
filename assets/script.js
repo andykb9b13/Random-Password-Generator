@@ -55,7 +55,7 @@ function newPassword() {
   // ask the user if they want special characters
   let special = confirm("Would you like to use special characters? (Ex. $ # % *)");
   if (special) {
-    alert("YES!!! Your password WILL include special characters (...my f@v*r!te)")
+    alert("YES!!! Your password WILL include special characters (...they're my f@v*r!te)")
     charString = charString.concat(specialChars)
     console.log(charString)
   } else {
