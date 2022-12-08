@@ -1,20 +1,5 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-
-
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// Creating a random set of characters (can't seem to add to itself)
+// Creating a random set of characters
 let allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
 let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let lowerChars = "abcdefghijklmnopqrstuvwxyz"
@@ -23,8 +8,8 @@ let specialChars = "!@#$%^&*"
 let charString = "";
 
 function password() {
-  let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 15 characters")
-  if (numCharacters >= 8 && numCharacters <= 15) {
+  let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 128 characters")
+  if (numCharacters >= 8 && numCharacters <= 128) {
     confirm("Your password is: " + numCharacters + " characters long")
   } else if (numCharacters < 8) {
     alert("You password is too SHORT. Must be between 8 and 15 characters")
@@ -87,14 +72,25 @@ function password() {
     }
     return password
   }
-  makePassword()
-  let newPassword = makePassword()
+  return makePassword()
+  // let newPassword = makePassword()
 }
 
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
 
 
-// !!!! Need to be able to combine strings!!!!
+  var passwordText = document.querySelector("#password");
 
+  passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
