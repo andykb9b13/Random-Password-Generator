@@ -8,17 +8,17 @@ let charString = "";
 
 // Function that makes the password using character and length choices
 function newPassword() {
-  let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 128 characters")
+  let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 128 characters)")
   if (!numCharacters) {
     alert("Whoops! Nevermind...")
     return "I guess you didn't want to make a password after all :( Try again...it's fun!"
   } else if (numCharacters >= 8 && numCharacters <= 128) {
     confirm("Your password is: " + numCharacters + " characters long")
   } else if (numCharacters < 8) {
-    alert("You password is too SHORT. Must be between 8 and 15 characters")
+    alert("You password is too SHORT. Must be between 8 and 128 characters")
     return newPassword()
   } else {
-    alert("Your password is too LONG. Must be between 8 and 15 characters")
+    alert("Your password is too LONG. Must be between 8 and 128 characters")
     return newPassword()
   }
   // Ask the user if they want lowercase letters
