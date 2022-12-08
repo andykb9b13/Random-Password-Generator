@@ -84,10 +84,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-
-
-//  confirm each character type choice (at least one character choice MUST be selected when all prompts have been answered)
-// The password generated matches the selected character criteria
