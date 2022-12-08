@@ -54,6 +54,10 @@ function newPassword() {
   } else {
     alert("Your password will NOT contain special characters")
   }
+  if (!lowercase && !uppercase && !numbers && !special) {
+    alert("You must select a type of character for you password")
+    return newPassword()
+  }
 
   // Actually make the password
   function makePassword() {
@@ -70,7 +74,6 @@ function newPassword() {
 }
 
 var generateBtn = document.querySelector("#generate");
-// !!!!THIS CODE NEEDS TO BE IN THE FUNCTION WRITE PASSWORD so it can be run multiple times!!!!
 
 // Write password to the #password input
 function writePassword() {
