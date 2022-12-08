@@ -13,52 +13,45 @@ function password() {
     confirm("Your password is: " + numCharacters + " characters long")
   } else if (numCharacters < 8) {
     alert("You password is too SHORT. Must be between 8 and 15 characters")
+    return password()
   } else {
     alert("Your password is too LONG. Must be between 8 and 15 characters")
   }
   // Ask the user if they want lowercase letters
-  let lowercase = prompt("Would you like to use lowercase letters? Y or N");
-  if (lowercase === "Y") {
-    confirm("Your password will include lowercase letters")
+  let lowercase = confirm("Would you like to use lowercase letters? Y or N");
+  if (lowercase) {
+    alert("Your password will include lowercase letters")
     charString = charString.concat(lowerChars);
     console.log(charString)
-  } else if (lowercase === "N") {
-    confirm("Your password will NOT contain lowercase letters")
   } else {
-    alert("Please enter a vaild entry")
+    alert("Your password will NOT contain lowercase letters")
   }
   // ask the user if they want uppercase letters
-  let uppercase = prompt("Would you like to use UPPERCASE letters?");
-  if (uppercase === "Y") {
-    confirm("Your password will include UPPERCASE letters")
+  let uppercase = confirm("Would you like to use UPPERCASE letters?");
+  if (uppercase) {
+    alert("Your password will include UPPERCASE letters")
     charString = charString.concat(upperChars)
     console.log(charString)
-  } else if (uppercase === "N") {
-    confirm("Your password will NOT contain UPPERCASE letters")
   } else {
-    alert("Please enter a vaild entry")
+    alert("Your password will NOT contain UPPERCASE letters")
   }
   // ask the user if they want numbers
-  let numbers = prompt("would you like to use numbers?");
+  let numbers = confirm("would you like to use numbers?");
   if (numbers === "Y") {
-    confirm("Your password will include numbers")
+    alert("Your password will include numbers")
     charString = charString.concat(numberChars)
     console.log(charString)
-  } else if (numbers === "N") {
-    confirm("Your password will NOT contain numbers")
   } else {
-    alert("Please enter a vaild entry")
+    alert("Your password will NOT contain numbers")
   }
   // ask the user if they want special characters
-  let special = prompt("Would you like to use special characters? (Ex. $ # % *)");
-  if (special === "Y") {
-    confirm("Your password will include special characters")
+  let special = confirm("Would you like to use special characters? (Ex. $ # % *)");
+  if (special) {
+    alert("Your password will include special characters")
     charString = charString.concat(specialChars)
     console.log(charString)
-  } else if (special === "N") {
-    confirm("Your password will NOT contain special characters")
   } else {
-    alert("Please enter a vaild entry")
+    alert("Your password will NOT contain special characters")
   }
 
   // Determine the 
