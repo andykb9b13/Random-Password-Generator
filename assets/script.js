@@ -8,6 +8,7 @@ let charString = "";
 
 // Function that makes the password using character and length choices
 function newPassword() {
+  charString = "";
   let numCharacters = prompt("How many characters would you like your password to be? (Between 8 and 128 characters)")
   if (!numCharacters) {
     alert("Whoops! Nevermind...")
